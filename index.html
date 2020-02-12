@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <title>HOME BANKING</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="js/homebanking.js">
+    </script>
+  </head>
+  <body>
+    <div class="header">
+      <img class="logo" src="img/logo.png"/>
+      <div class="align-left">
+        <span id="nombre">Bienvenido/a</span>
+        <img class="avatar" src="img/avatar.svg"/>
+      </div>
+    </div>
+
+
+<!-- The buttons to control the stream -->
+<div class="button-group">
+  <button id="btn-start" type="button" class="button">Start Streaming</button>
+  <button id="btn-stop" type="button" class="button">Stop Streaming</button>
+  <button id="btn-capture" type="button" class="button">Capture Image</button>
+</div>
+
+<!-- Video Element & Canvas -->
+<div class="play-area">
+  <div class="play-area-sub">
+    <h3>The Stream</h3>
+    <video id="stream" width="320" height="240"></video>
+  </div>
+
+
+    <div class="white-container">
+      <div class="menu-container">
+        <h1 class="tu-cuenta">Tu cuenta</h1>
+        <button class="links" onclick="extraerDinero()">Extraer dinero</button>
+        <button class="links" onclick="depositarDinero()">Depositar dinero</button>
+        <button class="links" onclick="pagarServicio()">Pagar servicios</button>
+        <button class="links" onclick="transferirDinero()">Transferir dinero</button>
+        <button class="links" onclick="cambiarLimiteDeExtraccion()">Cambiar límite de extracción</button>
+      </div>
+      <div class="green-container">
+        <div class="cuenta-info">
+          <p>Saldo en tu cuenta</p>
+          <h3 id="saldo-cuenta">$</h3>
+          <p id="limite-extraccion">Tu límite de extracción es: </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
